@@ -1,0 +1,107 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="grid.css" />
+
+</head>
+
+<body>
+
+    <div class="grid">
+
+        <div id="hesc" class="header-scroller">
+            <div class="header-content">
+                <table>
+                    <thead>
+                        <th class="header-col">title1</th>
+                        <th class="header-col">title2</th>
+                        <th class="header-col">title3</th>
+                        <th class="header-col">title4</th>
+                        <th class="header-col">title5</th>
+                        <th class="header-col">title6</th>
+                        <th class="header-col">title7</th>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <div class="data-scroller" onscroll="handleScroll(event);">
+            <div class="data-content">
+                <table class="alt">
+                    <tr class="row">
+                        <td class="cell">1cell1</td>
+                        <td class="cell">cell2</td>
+                        <td class="cell">cell3</td>
+                        <td class="cell">cell4</td>
+                        <td class="cell">cell5</td>
+                        <td class="cell">cell6</td>
+                        <td class="cell">cell7</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="cell">2cell1</td>
+                        <td class="cell">cell2</td>
+                        <td class="cell">cell3</td>
+                        <td class="cell">cell4</td>
+                        <td class="cell">cell5</td>
+                        <td class="cell">cell6</td>
+                        <td class="cell">cell7</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="cell">3cell1</td>
+                        <td class="cell">cell2</td>
+                        <td class="cell">cell3</td>
+                        <td class="cell">cell4</td>
+                        <td class="cell">cell5</td>
+                        <td class="cell">cell6</td>
+                        <td class="cell">cell7</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="cell">4cell1</td>
+                        <td class="cell">cell2</td>
+                        <td class="cell">cell3</td>
+                        <td class="cell">cell4</td>
+                        <td class="cell">cell5</td>
+                        <td class="cell">cell6</td>
+                        <td class="cell">cell7</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="cell">5cell1</td>
+                        <td class="cell">cell2</td>
+                        <td class="cell">cell3</td>
+                        <td class="cell">cell4</td>
+                        <td class="cell">cell5</td>
+                        <td class="cell">cell6</td>
+                        <td class="cell">cell7</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="cell">6cell1</td>
+                        <td class="cell">cell2</td>
+                        <td class="cell">cell3</td>
+                        <td class="cell">cell4</td>
+                        <td class="cell">cell5</td>
+                        <td class="cell">cell6</td>
+                        <td class="cell">cell7</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="menu">
+
+        </div>
+
+    </div>
+
+    <script>
+        function handleScroll(e) {
+            document.getElementById("hesc").scrollLeft = e.target.scrollLeft;
+            console.log("scroll: " + e.target.scrollLeft + " " + top.scrollLeft);
+        }
+    </script>
+
+
+
+</body>
+
+</html>

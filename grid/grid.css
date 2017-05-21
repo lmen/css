@@ -1,0 +1,67 @@
+body {
+  background-color: lightgray; }
+
+.grid {
+  background-color: yellow;
+  width: 300px;
+  height: 100px;
+  position: relative; }
+  .grid .header-scroller {
+    position: absolute;
+    right: 17px;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    overflow: scroll; }
+    .grid .header-scroller .header-content table {
+      table-layout: fixed;
+      background-color: #ff0990;
+      width: 100%;
+      height: 100%;
+      empty-cells: show;
+      border-collapse: collapse;
+      /* don't show the border on the last column */ }
+      .grid .header-scroller .header-content table thead, .grid .header-scroller .header-content table th {
+        border: 0; }
+      .grid .header-scroller .header-content table th {
+        border-right: 1px solid black;
+        width: 50px;
+        overflow: hidden; }
+      .grid .header-scroller .header-content table th:last-child {
+        border: 0; }
+  .grid .data-scroller {
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+    overflow-x: auto;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0px;
+    margin-top: 20px;
+    bottom: 0px; }
+    .grid .data-scroller .data-content {
+      position: relative; }
+      .grid .data-scroller .data-content table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        /* don't show the border on the last column */ }
+        .grid .data-scroller .data-content table.alt tr:nth-child(odd) {
+          background-color: #ddd; }
+        .grid .data-scroller .data-content table.alt tr:nth-child(even) {
+          background-color: #eee; }
+        .grid .data-scroller .data-content table tr, .grid .data-scroller .data-content table td {
+          border: 0; }
+        .grid .data-scroller .data-content table td {
+          border-right: 1px solid black;
+          width: 50px;
+          overflow: hidden; }
+        .grid .data-scroller .data-content table td:last-child {
+          border: 0; }
+  .grid .menu {
+    position: absolute;
+    background-color: #ff0990;
+    right: 0;
+    z-index: 10;
+    width: 17px;
+    height: 20px; }
