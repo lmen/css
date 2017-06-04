@@ -1,0 +1,24 @@
+{
+  "name": "theory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w css.scss css.css",
+    "ser": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmen/theory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmen/theory/issues"
+  },
+  "homepage": "https://github.com/lmen/theory#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}

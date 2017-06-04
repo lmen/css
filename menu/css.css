@@ -1,0 +1,43 @@
+body {
+  background-color: lightyellow; }
+
+.menu {
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+  position: relative; }
+  .menu ul, .menu li {
+    margin: 0px;
+    padding: 5px;
+    word-break: keep-all; }
+  .menu ul {
+    list-style: none; }
+  .menu > ul {
+    position: relative; }
+  .menu > ul > li {
+    display: inline-block;
+    position: relative; }
+  .menu > ul > li ul {
+    width: 120px;
+    border: 1px solid red;
+    position: absolute;
+    left: 5px;
+    margin-top: -3px;
+    background-color: #eee;
+    z-index: 10; }
+    .menu > ul > li ul li {
+      background-color: #eee;
+      position: relative; }
+  .menu .close {
+    display: none; }
+  .menu .open {
+    display: block;
+    animation: pulse 0.1s; }
+
+@Keyframes pulse {
+  0% {
+    width: 0px;
+    height: 0px; }
+  100% {
+    width: 120px;
+    height: 100%; } }
