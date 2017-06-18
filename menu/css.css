@@ -28,11 +28,21 @@ body {
     .menu > ul > li ul li {
       background-color: #eee;
       position: relative; }
+  .menu li:focus {
+    background-color: #aeaeae;
+    border: 0px;
+    outline: 0px; }
+  .menu li:hover {
+    background-color: #aeaeae; }
   .menu .close {
-    display: none; }
+    background-color: inherit; }
+    .menu .close > ul {
+      display: none; }
   .menu .open {
-    display: block;
-    animation: pulse 0.1s; }
+    background-color: #aeaeae; }
+    .menu .open > ul {
+      display: block;
+      animation: pulse 0.1s; }
 
 @Keyframes pulse {
   0% {

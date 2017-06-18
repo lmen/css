@@ -1,0 +1,231 @@
+$width-slot : 150px;
+$height-slot: 100px;
+
+
+body {
+    background-color: lightyellow;
+}
+
+.carrosel {
+    box-sizing: border-box;
+    position: relative;       
+
+    .slot {                
+        position: absolute;        
+        width: $width-slot;
+        height: $height-slot;
+        //display: none; // there is no animation
+        
+
+        //-webkit-transform: translate3d(-100%, 0, 0);
+        //transform: translate3d(-100%, 0, 0);
+       //left: 100%;       
+      
+    }
+
+ .active {
+           //-webkit-transition: 0.6s ease-in-out left;
+            //-o-transition: 0.6s ease-in-out left;
+            //transition: left 6.6s ease-in-out ;
+            left: 0%;
+            transition: left 0.8s ease-in-out;
+            //transition: left 0.8s ease-out;
+            //background-color: yellowgreen;
+           // display:block;
+           // animation: showNav 250ms ease-in-out both;
+       }
+
+  .place-left {
+      left:-100%;
+  }    
+
+  .place-right {
+      left:100%;
+  }      
+
+  .active-go-left {
+      left:-100%;
+      transition: left 0.8s ease-in-out ;
+  }
+  .active-go-right {
+      left:100%;
+      transition: left 0.8s ease-in-out;
+  }
+
+  
+  .show-from-right {
+      animation: show-from-right 0.8s ease-out both;
+  }
+
+  .show-from-left {
+      animation: show-from-left 0.8s ease-out both;
+  }
+
+  .hide-to-right {
+      animation: hide-to-right 0.8s ease-out both;
+  }
+
+  .hide-to-left {
+      animation: hide-to-left 0.8s ease-out both;
+  }
+
+
+       @keyframes show-from-right {
+        from {left: 100%;}
+        to {left: 0%;}
+        }
+
+        @keyframes hide-to-left {
+            from {left: 0%;}
+            to {left: -100%;}
+        }
+
+        @keyframes show-from-left {
+            from {left: -100%;}
+            to {left: 0%;}
+        }
+
+        @keyframes hide-to-right {
+            from {left: 0%;}
+            to {left: 100%;}
+        }
+
+    .viewport {
+        position: relative;
+        overflow: hidden;
+        width: $width-slot;
+        height: $height-slot*3;
+        border: 1px solid black;
+    }
+
+    
+
+}
+
+.content { 
+    line-height: 100px;
+    vertical-align: middle;
+    //margin: auto;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    background-color: chartreuse;
+    
+}
+
+    .bg-red {
+        background-color: red;
+    }
+
+        .bg-or {
+        background-color: orchid;
+    }
+
+
+
+    /*
+
+.carousel {
+  position: relative;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  line-height: 1;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-inner > .item {
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    -moz-transition: -moz-transform 0.6s ease-in-out;
+    -o-transition: -o-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+  }
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    left: 0;
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    left: 0;
+  }
+  .carousel-inner > .item.next.left,
+  .carousel-inner > .item.prev.right,
+  .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+  }
+}
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .active {
+  left: 0;
+}
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carousel-inner > .next {
+  left: 100%;
+}
+.carousel-inner > .prev {
+  left: -100%;
+}
+
+*/
+
+.b {
+    position:relative;
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+}
+
+.box {
+    
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    //-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    //transition: left 2s; //, width 2s, height 2s, background-color 2s, transform 2s;
+    transition: left 0.8s ease-out;
+}
+
+.box1 {
+    left: 100px;
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    //-webkit-transform: rotate(180deg);
+    //transform: rotate(180deg);
+    //transition: left 2s; 
+    transition: left 0.8s ease-in;
+
+}

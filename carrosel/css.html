@@ -1,0 +1,112 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="css.css" />
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log('sas');
+
+            var a = document.getElementsByClassName("slot");
+            for (let el of a) {
+                //menuComponent(el);
+            }
+
+            let currentShow = 1;
+
+            var goRight = document.getElementsByClassName("goRight")[0];
+            goRight.addEventListener("click", (e) => {
+                currentShow = --currentShow < 0 ? a.length - 1 : currentShow;
+                changeRight(currentShow, " active-go-right");
+            });
+
+            var goLeft = document.getElementsByClassName("goLeft")[0];
+            goLeft.addEventListener("click", (e) => {
+                currentShow = ++currentShow >= a.length ? 0 : currentShow;
+                changeLeft(currentShow);
+            });
+
+
+            function changeLeft(po) {
+                var cssClass = " active-go-left";
+                console.log('posleft:' + po);
+
+                var currentActive = findCurrentActive(a);
+                cleanActiveCss(currentActive);
+                currentActive.className = currentActive.className + " hide-to-left"
+
+                var slot = a[po];
+                cleanHideCss(slot);
+                slot.className = slot.className + " show-from-right";
+            }
+
+            function changeRight(po) {
+                console.log('posright: ' + po);
+
+                var currentActive = findCurrentActive(a);
+                cleanActiveCss(currentActive);
+                currentActive.className = currentActive.className + " hide-to-right"
+
+                var slot = a[po];
+                cleanHideCss(slot);
+                slot.className = slot.className + " show-from-left";
+            }
+
+            function findCurrentActive(a) {
+                for (let el of a) {
+                    console.log('el:' + el.className);
+                    if (/show-from-left|show-from-right/.test(el.className)) {
+                        return el;
+                    }
+                }
+            }
+
+            function cleanActiveCss(el) {
+                el.className = el.className.replace(" show-from-left", "");
+                el.className = el.className.replace(" show-from-right", "");
+            }
+
+            function cleanHideCss(el) {
+                el.className = el.className.replace(" hide-to-left", "");
+                el.className = el.className.replace(" hide-to-right", "");
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="carrosel">
+
+        <div class="viewport ">
+            <div class="slot content hide-to-right">
+                UM
+            </div>
+
+            <div class="slot content bg-red show-from-left">
+                DOIS
+            </div>
+
+            <!--
+            <div class="slot content bg-or hide-to-left">
+                TRÊS
+            </div>
+            -->
+        </div>
+
+    </div>
+
+    <div>
+        <a href="#" class="goLeft">Left</a>
+        <a href="#" class="goRight">Right</a>
+    </div>
+
+
+    <div class="box">Sample</div>
+
+</body>
+
+</html>

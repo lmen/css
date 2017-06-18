@@ -5,6 +5,7 @@ $height-grid-header: 15px;
 $height-grid-data: $height-grid - $height-grid-header -5;
 
 $height-scroll-bar : 14px;
+$menu-selection-bg-color: #aeaeae;
 
 body {
     background-color: lightyellow;
@@ -54,13 +55,28 @@ body {
 
     }
 
-    .close {
-        display: none;
+    li:focus {
+        background-color: $menu-selection-bg-color;
+        border: 0px;
+        outline: 0px;
+    }
+    li:hover {
+        background-color: $menu-selection-bg-color;
     }
 
-    .open{
-        display: block;
-        animation: pulse 0.1s ;
+    .close {
+        background-color: inherit;
+        >ul {
+            display: none;
+        }
+    }
+
+    .open {
+        background-color: $menu-selection-bg-color;
+        >ul {    
+            display: block;
+            animation: pulse 0.1s ;
+        }
     }
 
 
