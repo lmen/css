@@ -7,7 +7,11 @@ body {
 }
 
 .carrosel {
-    box-sizing: border-box;
+
+    * {
+        box-sizing: border-box;
+    }
+
     position: relative;       
 
     .slot {                
@@ -63,9 +67,54 @@ body {
         border: 1px solid black;
     }
 
-    .controllers {
-        position:absolute;
+    .goLeft, .goRight {  
+        
+        padding: 0px;
+        margin: 0px;                    
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 15%;            
+        font-size: 20px;
+        color: blanchedalmond;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0,0,0,.6);
+        background-color: rgba(0,0,0,0);
+        filter: alpha(opacity=50);
+        opacity: .5;
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            z-index: 5;
+            display: inline-block;
+            margin-top: -10px;                
+        }
     }
+
+    .goRight {
+        //background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+        right: 0;
+        left: auto;
+
+        .icon {                                
+            right: 50%;
+            margin-right: -7px; 
+        }
+    }
+
+    .goLeft {
+        // background-image: linear-gradient(to left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+
+        .icon {
+            left: 50%;
+            margin-left: -7px; 
+        }
+    }
+       
+
+
 
 }
 
